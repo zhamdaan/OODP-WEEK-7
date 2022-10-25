@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std ;  
+class reads 
+  {  protected : 
+      string name  ; 
+      int roll ;  
+       int age ; 
+       int cls ;  
+       public  :  
+     int  readD () 
+       { cout<<"enter name"; 
+        cin >> name  ;  
+         cout<<"enter age "  ;  
+          cin >>age  ;  
+           cout<<"enter class " ;  
+            cin >> cls ;  
+               return 0  ; 
+       }  
+  } ;
+  class prints : public  reads 
+  {   public  : 
+      int printD  ()  
+           {  cout<<name<<endl ;  
+                cout<<"roll - "<<roll<<endl   ;  
+                  cout <<"age - "<<age<<endl  ;  
+                     cout<<"class -  " <<cls<<endl ;  
+                     return 0  ; 
+           }
+  } ; 
+int main() { prints A ; 
+  A.readD ()  ;  
+   A.printD ()  ;  
+    return 0;
+}
