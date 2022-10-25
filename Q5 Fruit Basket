@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std    ;  
+  
+class Fruit 
+ {   public   :   
+     int apple , mango , banana , strawberry , pineapple  , guava  ;
+     int basket  ; 
+      public :
+      int  entFruit () 
+         { cout<<"enter the number of apples "<<endl ;  
+            cin>>apple ; 
+             cout<<"enter the number of mangoes "<<endl ;  
+               cin >>mango ;  
+                 cout<<" enter the number of bananas  "<<endl  ;  
+                   cin >> banana ;  
+                     cout << " enter the number of strawberries "<< endl  ;
+                      cin >>strawberry ; 
+                       cout<< "enter the number of pineapple "<<endl ; cin >> pineapple ;  
+                         cout<<"enter the number of guava  "<<endl ; 
+                            cin >>guava ;  return 0  ;  
+         } 
+         int totfruits ()  
+           {  basket = apple+mango+banana+ strawberry + pineapple +  guava  ;  
+           return 0  ;  
+           }  
+          int printFruits () 
+            {  cout<<"total number of fruits are  "<<basket<<endl  ; 
+                
+                cout<<"the number of apples - "<< apple<<endl ; 
+               cout << " the number of mangoes - "<< mango <<endl ; 
+               cout<< " the number of bananas - "<<banana<<endl ;
+               cout << " the number of strawberries - "<<strawberry <<endl ;  
+                 cout<<" the number of pineapples - "<<pineapple<<endl ;  
+                  cout<< "  the number of guavas -  "<<guava<<endl  ;  
+                      return 0  ;  
+            }    
+ }  ; 
+           class Apples : public Fruit 
+             {  public : 
+             int  printApple (Fruit A )
+               { cout<<"apples are "<<A.apple<<endl ;  
+                  return 0  ;  
+               }  
+             }  ;  
+               class Mangoes : public Fruit 
+                  {  public :  
+                     int printMango  (Fruit A) 
+                       {  cout<<"mangoes are "<<A.mango <<endl ;   
+                          return 0  ;  
+                       } 
+                  } ; 
+                  
+                  int main () 
+                   {   Fruit A  ;
+                   A.entFruit () ; 
+                       A.totfruits ()  ;  
+                       A.printFruits ()  ;  
+                       Apples B ;
+                       B.printApple (A ); 
+                       Mangoes C  ;  
+                        C.printMango (A)  ; 
+                          return 0  ;   
+                   }  
