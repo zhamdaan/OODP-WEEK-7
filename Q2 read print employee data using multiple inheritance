@@ -1,0 +1,45 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std ;  
+ class employee 
+  {  public : 
+       string name  ;   
+      int eNO ; 
+      int age  ;  
+       int salary  ; 
+  }  ;
+  class remp : public employee 
+      {  public  :  
+          int  readE ()
+           {  cout<<"enter name "<<endl ;  
+             cin >> name  ;  
+            cout << " enter employee number "<< endl ; 
+                 cin >> eNO; 
+        cout<< "  enter employee  age "<<endl  ; 
+             cin>>age ; 
+               cout<< " enter employee salary "<<endl ; 
+                  cin >> salary  ; 
+                    return 0  ; 
+           }   
+      };
+             class pemp : public employee  
+              { 
+                  public :
+              
+                 int printE (remp X) 
+                   {  cout<<" name  -  "<<X.name<<endl  ; 
+                   cout<<"employee number  - "<<X.eNO <<endl  ; 
+                    cout<<" age  -   " << X.age <<endl ; 
+                     cout<<" salary - "<<X.salary<<endl ; 
+                   return 0  ;  
+                   }  };
+int main() {
+     remp A ; 
+
+     A.readE (); 
+     pemp b ; 
+     b.printE (A) ; 
+   
+
+    return 0;
+}
